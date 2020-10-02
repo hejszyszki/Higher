@@ -46,10 +46,6 @@ class Grade(models.Model):
 	candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
 	recruiter = models.ForeignKey(Recruiter, on_delete=models.SET_NULL, null=True)
 
-	@property
-	def get_avg_grade(self):
-		return Ocena.objects.filter(Candidate=self.id).aggregate(Avg('value'))
-
 	class Meta:
 		unique_together = ('task', 'candidate')
 		
