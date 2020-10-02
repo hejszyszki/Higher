@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['mighty-plateau-07223.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['fast-springs-72668.herokuapp.com', 'localhost:8000']
 
 
 # Application definition
@@ -115,4 +115,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'django2')
+STATIC_ROOT = os.path.join(BASE_DIR)
